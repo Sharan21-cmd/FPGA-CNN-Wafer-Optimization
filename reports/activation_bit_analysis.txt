@@ -1,0 +1,29 @@
+CNN ACTIVATION AND WEIGHT BIT ANALYSIS
+=======================================
+
+Model: models/baseline_cnn.pth
+Input: 48x48
+Test samples: 118595
+
+ACTIVATIONS
+-----------
+features.0: min=-5.939264, max=2.144367, abs_max=5.939264, required_integer_bits=4, nonzero=100.00%
+features.1: min=0.000000, max=2.144367, abs_max=2.144367, required_integer_bits=3, nonzero=61.38%
+features.2: min=0.000000, max=2.144367, abs_max=2.144367, required_integer_bits=3, nonzero=73.61%
+features.3: min=-4.453640, max=3.109845, abs_max=4.453640, required_integer_bits=4, nonzero=100.00%
+features.4: min=0.000000, max=3.109845, abs_max=3.109845, required_integer_bits=4, nonzero=40.61%
+features.5: min=0.000000, max=3.109845, abs_max=3.109845, required_integer_bits=4, nonzero=66.04%
+features.6: min=-13.089281, max=10.757694, abs_max=13.089281, required_integer_bits=5, nonzero=100.00%
+features.7: min=0.000000, max=10.757694, abs_max=10.757694, required_integer_bits=5, nonzero=15.57%
+features.8: min=0.000000, max=10.757694, abs_max=10.757694, required_integer_bits=5, nonzero=40.02%
+classifier.1: min=-213.078308, max=62.410034, abs_max=213.078308, required_integer_bits=9, nonzero=100.00%
+classifier.2: min=0.000000, max=62.410034, abs_max=62.410034, required_integer_bits=7, nonzero=29.09%
+classifier.4: min=-60.601589, max=31.053644, abs_max=60.601589, required_integer_bits=7, nonzero=100.00%
+
+WEIGHTS
+-------
+features.0: min=-0.958282, max=0.544135, abs_max=0.958282, required_integer_bits=2
+features.3: min=-0.462843, max=0.528372, abs_max=0.528372, required_integer_bits=2
+features.6: min=-0.527282, max=0.485663, abs_max=0.527282, required_integer_bits=2
+classifier.1: min=-0.520472, max=0.498417, abs_max=0.520472, required_integer_bits=2
+classifier.4: min=-0.454085, max=0.390726, abs_max=0.454085, required_integer_bits=2

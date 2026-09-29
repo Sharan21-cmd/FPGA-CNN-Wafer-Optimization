@@ -1,0 +1,21 @@
+FIXED-POINT / PRECISION EXPERIMENT
+==================================
+
+Input size: 48x48
+Test samples: 118595
+
+FP32 BASELINE
+Accuracy: 0.937797
+Macro F1: 0.592723
+
+RESULTS
+Bits | Accuracy | Macro F1 | Accuracy Drop | F1 Drop
+------------------------------------------------
+   8 | 0.598002 | 0.343307 | 0.339795 | 0.249417
+   7 | 0.924466 | 0.448873 | 0.013331 | 0.143850
+   6 | 0.941119 | 0.332868 | -0.003322 | 0.259855
+   5 | 0.934281 | 0.118807 | 0.003516 | 0.473916
+   4 | 0.933437 | 0.107286 | 0.004359 | 0.485437
+
+NOTE:
+This is a post-training uniform fake-quantization experiment. The results are used to study precision sensitivity before implementing the corresponding fixed-point arithmetic in RTL.

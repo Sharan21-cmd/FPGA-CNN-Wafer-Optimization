@@ -1,0 +1,30 @@
+TRUE INTEGER FIXED-POINT GOLDEN MODEL
+======================================================================
+
+Configuration
+Input  : unsigned Q2.0
+Conv1  : signed Q4.4
+Conv2  : signed Q4.4
+Conv3  : signed Q5.3
+FC1    : signed Q9.3 (12-bit)
+FC2    : signed Q7.1
+Weights: signed Q2.6 (8-bit)
+
+Accuracy : 0.943421
+Macro F1 : 0.591942
+
+              precision    recall  f1-score   support
+
+        none   0.973492  0.975348  0.974419    110701
+      Center   0.435826  0.567308  0.492950       832
+    Edge-Loc   0.504333  0.524892  0.514407      2772
+   Edge-Ring   0.603312  0.744227  0.666402      1126
+         Loc   0.580882  0.400405  0.474047      1973
+     Scratch   0.057199  0.041847  0.048333       693
+      Random   0.764103  0.579767  0.659292       257
+       Donut   0.566138  0.732877  0.638806       146
+   Near-full   0.973333  0.768421  0.858824        95
+
+    accuracy                       0.943421    118595
+   macro avg   0.606513  0.592788  0.591942    118595
+weighted avg   0.942399  0.943421  0.942440    118595

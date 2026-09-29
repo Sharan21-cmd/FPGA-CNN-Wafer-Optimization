@@ -1,0 +1,33 @@
+METHOD 2 - ZERO SKIPPING
+========================
+
+Test samples: 118595
+Input size: 1x48x48
+Accuracy: 93.7797%
+Macro F1: 59.2723%
+CPU latency: 0.337207 ms/image
+
+features.1
+Activation zero rate: 38.6157%
+Total MACs: 629,551,595,520
+Skipped MACs: 235,383,046,416
+Executed MACs: 394,168,549,104
+Potential MAC skip: 37.3890%
+
+features.4
+Activation zero rate: 59.3862%
+Total MACs: 629,551,595,520
+Skipped MACs: 353,614,959,488
+Executed MACs: 275,936,636,032
+Potential MAC skip: 56.1693%
+
+features.7
+Activation zero rate: 84.4261%
+Total MACs: 629,551,595,520
+Skipped MACs: 475,411,558,208
+Executed MACs: 154,140,037,312
+Potential MAC skip: 75.5159%
+
+Overall MAC skip: 56.3581%
+
+CPU latency is dense PyTorch latency. MAC skip percentage is theoretical potential for a true zero-skipping implementation.

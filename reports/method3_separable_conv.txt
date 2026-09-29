@@ -1,0 +1,33 @@
+METHOD 3 - DEPTHWISE-SEPARABLE CONVOLUTION
+===========================================
+
+Input size: 1x48x48
+Training samples: 54355
+Test samples: 118595
+
+Parameters: 299,379
+Standard convolution MACs: 5,640,192
+Separable convolution MACs: 771,840
+MAC reduction: 86.3154%
+
+Accuracy: 94.9517%
+Macro F1: 56.9926%
+CPU latency: 0.315361 ms/image
+
+Classification Report
+---------------------
+              precision    recall  f1-score   support
+
+        none     0.9741    0.9824    0.9783    110701
+      Center     0.4783    0.5421    0.5082       832
+    Edge-Loc     0.5648    0.5191    0.5410      2772
+   Edge-Ring     0.6030    0.7433    0.6659      1126
+         Loc     0.5255    0.4121    0.4619      1973
+     Scratch     0.0000    0.0000    0.0000       693
+      Random     0.8323    0.5019    0.6262       257
+       Donut     0.3450    0.6096    0.4406       146
+   Near-full     0.8455    0.9789    0.9073        95
+
+    accuracy                         0.9495    118595
+   macro avg     0.5743    0.5877    0.5699    118595
+weighted avg     0.9432    0.9495    0.9460    118595

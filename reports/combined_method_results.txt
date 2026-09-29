@@ -1,0 +1,48 @@
+COMBINED METHOD
+===============
+
+DSC + 8-bit + Zero-Skipping + Parallel CPU
+
+Test samples: 118595
+Input size: 1x48x48
+Parameters: 299,379
+
+Accuracy: 94.7898%
+Macro F1: 57.4793%
+
+Standard convolution MACs: 5,640,192
+DSC MACs: 771,840
+DSC MAC reduction: 86.3154%
+
+Zero activation rate: 54.5521%
+Potential skipped DSC MACs: 421,054
+Potential executed DSC MACs: 350,786
+
+Parallel CPU latency
+--------------------
+1 thread(s): 0.792915 ms/image
+2 thread(s): 0.659841 ms/image
+4 thread(s): 0.521177 ms/image
+
+Classification Report
+---------------------
+              precision    recall  f1-score   support
+
+        none     0.9743    0.9803    0.9773    110701
+      Center     0.4748    0.5433    0.5067       832
+    Edge-Loc     0.5570    0.5220    0.5389      2772
+   Edge-Ring     0.6183    0.7425    0.6747      1126
+         Loc     0.4705    0.4202    0.4439      1973
+     Scratch     0.0000    0.0000    0.0000       693
+      Random     0.8434    0.5447    0.6619       257
+       Donut     0.3532    0.6507    0.4578       146
+   Near-full     0.8532    0.9789    0.9118        95
+
+    accuracy                         0.9479    118595
+   macro avg     0.5716    0.5981    0.5748    118595
+weighted avg     0.9424    0.9479    0.9449    118595
+
+
+IMPORTANT:
+Zero-skipping percentage represents potential arithmetic reduction. It is not claimed as measured CPU speedup.
+8-bit quantization is simulated using fake quantization; PyTorch still executes FP32 operations internally.

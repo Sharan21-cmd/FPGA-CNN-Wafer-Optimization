@@ -1,0 +1,22 @@
+Q-FORMAT / FIXED-POINT ANALYSIS
+================================
+
+Input size: 48x48
+Calibration samples: 54355
+
+ACTIVATION RANGES
+features.0: -5.939264 to 2.144367
+features.1: 0.000000 to 2.144367
+features.2: 0.000000 to 2.144367
+features.3: -4.302365 to 3.111961
+features.4: 0.000000 to 3.111961
+features.5: 0.000000 to 3.111961
+features.6: -11.511379 to 10.545077
+features.7: 0.000000 to 10.545077
+features.8: 0.000000 to 10.545077
+classifier.1: -207.001785 to 52.158577
+classifier.2: 0.000000 to 52.158577
+classifier.4: -46.985802 to 29.332911
+
+The candidate I.F formats above are range-based estimates.
+They are NOT yet the final RTL fixed-point configuration.

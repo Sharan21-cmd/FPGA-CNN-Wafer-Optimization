@@ -1,0 +1,32 @@
+MIXED-Q FIXED-POINT GOLDEN MODEL
+================================
+
+Input: Q2.0 unsigned
+Conv1: Q4.4 signed
+Conv2: Q4.4 signed
+Conv3: Q5.3 signed
+FC1: Q9.3 signed (12-bit)
+FC2: Q7.1 signed
+Weights: Q2.6 signed (8-bit)
+
+FP32 Accuracy: 0.937797
+FP32 Macro F1: 0.592723
+
+Mixed-Q Accuracy: 0.942063
+Mixed-Q Macro F1: 0.593952
+
+              precision    recall  f1-score   support
+
+        none     0.9740    0.9733    0.9737    110701
+      Center     0.4214    0.5962    0.4938       832
+    Edge-Loc     0.4951    0.5245    0.5094      2772
+   Edge-Ring     0.6335    0.7247    0.6761      1126
+         Loc     0.5480    0.4344    0.4846      1973
+     Scratch     0.0502    0.0404    0.0448       693
+      Random     0.7861    0.5720    0.6622       257
+       Donut     0.5550    0.7260    0.6291       146
+   Near-full     0.9740    0.7895    0.8721        95
+
+    accuracy                         0.9421    118595
+   macro avg     0.6041    0.5979    0.5940    118595
+weighted avg     0.9423    0.9421    0.9419    118595

@@ -1,0 +1,16 @@
+INPUT BIT-WIDTH EXPERIMENT
+==========================
+
+Dataset: WM-811K
+Input size: 48x48
+Test samples: 118595
+
+IMPORTANT:
+This software experiment evaluates the effect of representing the existing wafer values with different bit widths. It does not claim that PyTorch CPU execution physically uses 2-bit or 4-bit arithmetic.
+
+RESULTS
+-------
+Bits | Accuracy | Macro F1 | Latency ms/image
+   8 | 0.937797 | 0.592723 | 0.288109
+   4 | 0.937797 | 0.592723 | 0.299566
+   2 | 0.937797 | 0.592723 | 0.299914
